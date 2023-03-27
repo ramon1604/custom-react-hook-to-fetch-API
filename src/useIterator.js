@@ -6,9 +6,8 @@ export default function useIterator(url) {
   const [userList, setUserList] = useState([]);
   const [current, setCurrent] = useState([]);
   const [loading, setLoading] = useState(false);
-  const addUser = useRef(() => {})
 
-  addUser.current = async () => {
+  const addUser = async () => {
     setLoading(true);
     const add = await fetch(url);
     const res = await add.json();
@@ -27,10 +26,11 @@ export default function useIterator(url) {
 
   useEffect(() => {
     if (arrLength) {
-      addUser.current();
+      addUser();
       arrLength = false;
     }
-   }, []);
+    // eslint-disable-next-line
+  }, []);
 
   const next = () => {
     if (current.id < userList.length - 1) {
