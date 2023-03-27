@@ -18,4 +18,8 @@ Here are some ideas to get you started:
 THIS IS A TURING REACTJS LIVE CHALLENGE
 ---------------------------------------
 
-1- 
+1- Create custom react hook to fetch users from an API (https://randomuser.me/api/api) and display their picture and name on page one.
+2- It must return the list of users, the current user, a function to  fetch next user and move to previous one.
+
+📫  -   If need any help email: ramoncott@hotmail.com
+🔭  -   visit my website: challenges.ramoncott.com (I’m currently working on ...)
