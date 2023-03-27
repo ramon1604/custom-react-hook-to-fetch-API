@@ -1,5 +1,6 @@
 import React from "react";
 import useIterator from "./useIterator.js";
+import "./styles.css"
 
 export const IteratorTest = () => {
   const [userList, current, loading, next, previous] = useIterator(

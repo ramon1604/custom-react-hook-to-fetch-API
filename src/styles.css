@@ -2,3 +2,13 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+button {
+  width: 70px;
+  margin-left: 2px;
+}
+
+img {
+  margin-left: 10px;
+}
+
