@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 let arrLength = true;
 
@@ -6,8 +6,9 @@ export default function useIterator(url) {
   const [userList, setUserList] = useState([]);
   const [current, setCurrent] = useState([]);
   const [loading, setLoading] = useState(false);
+  const addUser = useRef(() => {})
 
-  const addUser = async () => {
+  addUser.current = async () => {
     setLoading(true);
     const add = await fetch(url);
     const res = await add.json();
@@ -26,11 +27,10 @@ export default function useIterator(url) {
 
   useEffect(() => {
     if (arrLength) {
-      addUser();
+      addUser.current();
       arrLength = false;
     }
-    // eslint-disable-next-line
-  }, []);
+   }, []);
 
   const next = () => {
     if (current.id < userList.length - 1) {
