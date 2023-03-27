@@ -3,9 +3,16 @@
   text-align: center;
 }
 
+div {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;  
+}
+
 button {
-  width: 70px;
-  margin-left: 2px;
+  width: 65px;
+  margin-left: 10px;
 }
 
 img {
