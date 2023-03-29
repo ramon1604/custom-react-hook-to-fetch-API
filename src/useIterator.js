@@ -57,6 +57,10 @@ export default function useIterator(url) {
         return curr
       }))
       setCurrent(userList[current.id - 1]);
+      return
+    }
+    if (userList.length === 1) {
+      window.location.reload(false);
     }
   }
 
