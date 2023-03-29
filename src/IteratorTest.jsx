@@ -3,7 +3,7 @@ import useIterator from "./useIterator.js";
 import "./styles.css"
 
 export const IteratorTest = () => {
-  const [userList, current, loading, next, previous] = useIterator(
+  const [userList, current, loading, next, previous, remove] = useIterator(
     "https://randomuser.me/api/"
   );
 
@@ -35,6 +35,8 @@ export const IteratorTest = () => {
           <br />
           <button onClick={() => next()}>Next</button>
           <button onClick={() => previous()}>Previous</button>
+          <br /><br />
+          <button onClick={() => remove()}>Remove</button>
         </div>
       )}
     </div>

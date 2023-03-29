@@ -49,5 +49,16 @@ export default function useIterator(url) {
     }
   };
 
-  return [userList, current, loading, next, previous];
+  const remove = () => {
+    if (current.id > 0) {
+      const newUserList = userList.filter((curr) => curr.id != current.id)
+      setUserList(newUserList.map((curr, id) => {
+        curr.id = id;
+        return curr
+      }))
+      setCurrent(userList[current.id - 1]);
+    }
+  }
+
+  return [userList, current, loading, next, previous, remove];
 }
